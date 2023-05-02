@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faFile, faFolder, faGear, faHomeLg, faMailBulk, faMusic, faPhotoFilm, faPlus, faTerminal, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faDownload, faEnvelope, faFile, faFolder, faGear, faGlobe, faHomeLg, faMusic, faPhotoFilm, faPlus, faTerminal, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faFileWord } from '@fortawesome/free-regular-svg-icons';
 
 const LeftBar = () => {
   return (
@@ -11,6 +12,9 @@ const LeftBar = () => {
         <button>
           <FontAwesomeIcon icon={faHomeLg} />
         </button>
+        <button>
+          <FontAwesomeIcon icon={faGlobe} />
+        </button>
         <hr />
         <button>
           <FontAwesomeIcon icon={faFolder} />
@@ -21,19 +25,28 @@ const LeftBar = () => {
         <button>
           <FontAwesomeIcon icon={faMusic} />
         </button>
+        <button>
+          <FontAwesomeIcon icon={faFileWord} />
+        </button>
+        <button>
+          <FontAwesomeIcon icon={faDownload} />
+        </button>
         <hr />
+        <button>
+          <FontAwesomeIcon icon={faCode} />
+        </button>
         <button>
           <FontAwesomeIcon icon={faTerminal} />
         </button>
         <button>
-          <FontAwesomeIcon icon={faCode} />
+          <FontAwesomeIcon icon={faFile} />
         </button>
         <hr />
         <button>
           <FontAwesomeIcon icon={faUsers} />
         </button>
         <button>
-          <FontAwesomeIcon icon={faMailBulk} />
+          <FontAwesomeIcon icon={faEnvelope} />
         </button>
         <hr />
         <button>
