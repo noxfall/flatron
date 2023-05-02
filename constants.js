@@ -6,7 +6,7 @@ const colors = (mode) => ({
         200: "#ababb0",
         300: "#808289",
         400: "#565861",
-        500: "#2c2e3a",  // MEDIUM GRAY
+        500: "#2c2e3a",  // MEDIUM GRAY [#282A36]
         600: "#23252e",
         700: "#1a1c23",
         800: "#121217",
@@ -136,3 +136,35 @@ const colors = (mode) => ({
       },
     })
 });
+
+/*
+$bgdarker: #1f212d;
+$bgdark: #2c2e3a;
+$bgdefault: #424557;
+$bglight: #555977;
+$bglighter: #6a6f95;
+
+$background: $bgdark;
+$background2: $bgdefault;
+$background3: $bgdarker;
+$lightbg: $bglighter;
+
+$grey: #f8f8f2;
+$blue: #6272a4;
+$cyan: #8be9fd;
+$green: #3cdd65;
+$orange: #ffb86c;
+$pink: #fc83d3;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+$white: #fafafa;
+$black: #202020;
+
+$very-short-duration: 0.1s;
+$short-duration: 0.3s;
+$medium-duration: 0.5s;
+$long-duration: 1s;
+
+$nuclear-font: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+*/
