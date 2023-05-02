@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Dialog, Card, CardHeader, CardBody, CardFooter, Button, Input } from '@material-tailwind/react';
+import { Dialog, Card, CardHeader, CardBody, Button, Input } from '@material-tailwind/react';
 import { addTodo } from '../utils/redux/todoSlice';
 
-const NewTaskModal = ({ open, handler, callback }) => {
+const NewTaskModal = ({ open, handler }) => {
   const { todos } = useSelector((state) => state.todos);
-  const [todo, setTodo] = useState({ id: 0, author: '', title: '' });
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
 
@@ -16,10 +15,6 @@ const NewTaskModal = ({ open, handler, callback }) => {
       setTitle('');
     }
   };
-
-
-
-  useEffect(() => callback, [title]);
 
   return (
     <div>

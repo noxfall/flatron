@@ -2,7 +2,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const SideMenuItem = ({ title, author, itemId }) => {
+const SideMenuItem = ({ title, author, delTodo }) => {
   return (
     <div
       className="w-full h-[65px] justify-between items-center flex 
@@ -13,7 +13,7 @@ const SideMenuItem = ({ title, author, itemId }) => {
         <span className="">{title}</span>
         <span className="text-[#6a6f95]">{author}</span>
       </div>
-      <div className="flex justify-center items-center w-[30px] h-[30px] transition ease-in-out hover:bg-red-500">
+      <div className="flex justify-center items-center w-[30px] h-[30px] transition ease-in-out hover:bg-red-500" onClick={delTodo}>
         <FontAwesomeIcon icon={faX} />
       </div>
     </div>

@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NewTaskModal } from './';
-import { todos } from '../mockDb';
 
 const NewTask = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +18,7 @@ const NewTask = () => {
         <FontAwesomeIcon icon={faPlus} />
 
       </div>
-      <NewTaskModal open={open} handler={toggleModal} callback={() => toggleModal} />
+      <NewTaskModal open={open} handler={toggleModal} />
     </div>
   );
 };
