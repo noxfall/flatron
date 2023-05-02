@@ -6,9 +6,9 @@ const LeftBar = () => {
   return (
     <aside
       id="leftBar"
-      className="flex flex-col justify-start items-center absolute left-0 top-[50px] w-[50px] h-full"
+      className="flex flex-col justify-start items-center absolute left-0 top-[45px] w-[50px] h-full"
     >
-      <div className="flex flex-col py-2 h-full">
+      <div className="flex flex-col py-1 h-full">
         <button>
           <FontAwesomeIcon icon={faHomeLg} />
         </button>

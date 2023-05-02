@@ -1,11 +1,10 @@
-import TopBar from "./components/common/TopBar";
-import LeftBar from "./components/common/LeftBar";
+import { TopBar, SidebarLeft } from "./components/common";
 
 const App = () => {
   return (
     <main className="app">
       <TopBar />
-      <LeftBar />
+      <SidebarLeft />
     </main>
   );
 };
