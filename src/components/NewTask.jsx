@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NewTaskModal } from './';
 
-const NewTask = () => {
+const NewTask = ({ handleAddTodo, handleChange }) => {
   const [open, setOpen] = useState(false);
 
-  const toggleModal = () => setOpen(!open);
+  const toggleModal = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className="flex justify-center items-center 
@@ -18,7 +20,7 @@ const NewTask = () => {
         <FontAwesomeIcon icon={faPlus} />
 
       </div>
-      <NewTaskModal open={open} handler={toggleModal} />
+      <NewTaskModal open={open} handler={toggleModal} handleAddTodo={handleAddTodo} handleChange={handleChange} />
     </div>
   );
 };

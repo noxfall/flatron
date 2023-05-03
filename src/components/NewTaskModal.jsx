@@ -1,20 +1,12 @@
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Dialog, Card, CardHeader, CardBody, Button, Input } from '@material-tailwind/react';
 import { addTodo } from '../utils/redux/todoSlice';
 
-const NewTaskModal = ({ open, handler }) => {
-  const { todos } = useSelector((state) => state.todos);
+const NewTaskModal = ({ open, handler, handleAddTodo, handleChange, title }) => {
+  const [currTodos, setCurrTodos] = useState([]);
+  const todos = JSON.parse(localStorage.getItem('todos'));
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-
-  const handleAddTodo = (e) => {
-    e.preventDefault();
-    if (title) {
-      dispatch(addTodo({ id: todos.length + 1, author: `REDUX #${todos.length + 1}`, title: title }));
-      setTitle('');
-    }
-  };
 
   return (
     <div>
@@ -28,7 +20,7 @@ const NewTaskModal = ({ open, handler }) => {
           <CardHeader className="text-[24px] bg-transparent shadow-none text-center text-[#818eb6]">New Task</CardHeader>
           <CardBody className="px-2">
             <form className="flex flex-col justify-between items-center relative" onSubmit={handleAddTodo}>
-              <Input variant="standard" label="Title" className="text-[#e0e3ed]" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <Input variant="standard" label="Title" className="text-[#e0e3ed]" value={title} onChange={handleChange} />
               <div className="pt-[2em]">
                 <Button
                   type="submit"
